@@ -7,6 +7,17 @@ documentation.
 ```{toctree}
 :maxdepth: 2
 :caption: Contents:
+:hidden:
 some-feature.md
 another-feature.md
+hello
+```
+
+```{toctree}
+:maxdepth: 2
+:caption: "Reference"
+:hidden:
+
+reference/modules
+
 ```
