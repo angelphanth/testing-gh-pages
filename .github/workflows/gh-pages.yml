@@ -27,10 +27,10 @@ jobs:
             uv run bash sphinx_build.sh
         #   uv run sphinx-build -n -W --keep-going -b html docs docs/_build/
 
-      # - name: Deploy to gh-pages
-      #   uses: peaceiris/actions-gh-pages@v3
-      #   if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     publish_dir: docs/_build/
-      #     publish_branch: gh-pages
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/_build/
+          publish_branch: gh-pages
